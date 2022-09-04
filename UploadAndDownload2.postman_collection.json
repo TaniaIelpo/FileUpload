@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "86874f38-b017-41a1-b9f3-a5df8c455767",
+		"name": "UploadAndDownload2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21003423"
+	},
+	"item": [
+		{
+			"name": "upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fileName",
+							"type": "file",
+							"src": "/C:/Users/utente/Desktop/image/IG-annvmariv-1024x1016.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/file/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"file",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "download",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/file/download?fileName=6cb4e0d6-054c-4ed5-9883-363ae4d78555.jpg",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"file",
+						"download"
+					],
+					"query": [
+						{
+							"key": "fileName",
+							"value": "6cb4e0d6-054c-4ed5-9883-363ae4d78555.jpg"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
